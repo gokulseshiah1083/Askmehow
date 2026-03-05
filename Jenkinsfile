@@ -1,22 +1,22 @@
 pipeline{
   agent any
   stages{
-    stage ('Checkout'){
+    stage('Checkout'){
       steps {
         git 'https://github.com/gokulseshiah1083/Askmehow'
       }
     }
-    stage ('Build'){
+    stage('Build'){
       steps {
         sh 'echo "building the app"'
       }
     }
-    stage ('Test'){
+    stage('Test'){
       steps {
         sh 'echo "Running the Test"' 
       }
     }
-    stage ('Deploy'){
+    stage('Deploy'){
       steps {
         sh 'echo "Deploying "' 
       }
