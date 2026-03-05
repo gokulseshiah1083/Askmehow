@@ -3,22 +3,22 @@ pipeline{
   stages{
     stage('Checkout'){
       steps {
-        git 'https://github.com/gokulseshiah1083/Askmehow'
+        git branch: 'main', url: 'https://github.com/gokulseshiah1083/Askmehow'
       }
     }
     stage('Build'){
       steps {
-        sh 'echo "building the app"'
+        bat 'echo "building the app"'
       }
     }
     stage('Test'){
       steps {
-        sh 'echo "Running the Test"' 
+        bat 'echo "Running the Test"'
       }
     }
     stage('Deploy'){
       steps {
-        sh 'echo "Deploying "' 
+        bat 'echo "Deploying "'
       }
     }
   }
